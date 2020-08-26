@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.javastart.fxevents.controller.ContentPaneController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.javastart.fxevents.controller.ContentPaneController">
     <children>
-        <VBox layoutX="154.0" layoutY="49.0" prefHeight="295.0" prefWidth="319.0">
+        <VBox layoutX="154.0" layoutY="49.0" prefHeight="300.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <fx:include source="textPane.fxml" fx:id="textPane" />
-                <HBox prefHeight="253.0" prefWidth="319.0" VBox.vgrow="ALWAYS">
-                    <children>
-                        <TextArea fx:id="originalTextArea" maxWidth="200.0" minWidth="200.0" prefHeight="200.0"
-                                  prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                        <TextArea fx:id="reverseTextArea" maxWidth="200.0" minWidth="200.0" prefHeight="200.0"
-                                  prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                    </children>
-                </HBox>
-                <Button fx:id="clearWindowButton" mnemonicParsing="false" prefHeight="43.0" prefWidth="319.0"
-                        text="Clear Windows" />
+
+                <fx:include fx:id="textPane" source="textPane.fxml" />
+                <Button fx:id="clearWindowButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="43.0" prefWidth="319.0" text="Clear Windows" />
             </children>
         </VBox>
     </children>

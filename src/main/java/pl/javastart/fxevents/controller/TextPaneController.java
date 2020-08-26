@@ -19,8 +19,9 @@ public class TextPaneController {
     public TextArea getReverseTextArea() {
         return reverseTextArea;
     }
+
     public void initialize() {
-        originalTextArea.addEventFilter(KeyEvent.KEY_RELEASED,
+    /*    originalTextArea.addEventFilter(KeyEvent.KEY_RELEASED,
                 x -> reverseTextHandler(originalTextArea, reverseTextArea)
         );
         reverseTextArea.addEventFilter(KeyEvent.KEY_RELEASED,
@@ -30,14 +31,14 @@ public class TextPaneController {
 
     private void reverseTextHandler(TextArea source, TextArea target) {
         target.setText(new StringBuilder(source.getText()).reverse().toString());
+    }*/
+        originalTextArea.addEventFilter(KeyEvent.KEY_RELEASED, x ->
+        {
+            System.out.println("Wciśnięto przycisk");
+            String textIn = originalTextArea.getText();
+            String textReverse = new StringBuilder().append(textIn).reverse().toString();
+            System.out.println(textReverse);
+            reverseTextArea.setText(textReverse);
+        });
     }
-    /*
-    originalTextArea.addEventFilter(KeyEvent.KEY_RELEASED, x ->
-    {
-        System.out.println("Wciśnięto przycisk");
-        String textIn = inputTextArea.getText();
-        String textReverse = new StringBuilder().append(textIn).reverse().toString();
-        System.out.println(textReverse);
-        outputTextArea.setText(textReverse);
-    });*/
 }
