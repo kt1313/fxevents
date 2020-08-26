@@ -8,12 +8,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyEvent;
 
 public class ContentPaneController {
-
     @FXML
-    private TextArea inputTextArea;
-
-    @FXML
-    private TextArea outputTextArea;
+    private TextPaneController textPaneController;
 
     @FXML
     private Button clearWindowButton;
@@ -24,19 +20,12 @@ public class ContentPaneController {
             public void handle(ActionEvent event) {
                 System.out.println("Wciśnięto przycisk");
                 System.out.println(event.getEventType());
-                inputTextArea.setText(" ");
-                outputTextArea.setText(" ");
+                var originalTextArea = textPaneController.getOriginalTextArea();
+                var reverseTextArea=textPaneController.getReverseTextArea();
+                originalTextArea.setText(" ");
+                reverseTextArea.setText(" ");
             }
         });
-            inputTextArea.addEventFilter(KeyEvent.KEY_RELEASED, x ->
-            {
-                System.out.println("Wciśnięto przycisk");
-                String textIn = inputTextArea.getText();
-                String textReverse = new StringBuilder().append(textIn).reverse().toString();
-                System.out.println(textReverse);
-                outputTextArea.setText(textReverse);
-            });
 
     }
 }
-

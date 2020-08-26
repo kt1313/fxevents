@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="pl.javastart.fxevents.controller.TextPaneController">
+    <children>
+        <TextArea fx:id="originalTextArea" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0"
+                  HBox.hgrow="ALWAYS"/>
+        <TextArea fx:id="reverseTextArea" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0"
+                  HBox.hgrow="ALWAYS"/>
+    </children>
+</HBox>
